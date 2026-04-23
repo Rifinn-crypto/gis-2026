@@ -4,7 +4,6 @@
 
 -- Started on 2026-04-11 13:46:02
 
-\restrict V5UNmGKElfBYUBARuW4Z3zv8666XvYdQxwcbbkLH3CeYXAhspg4wg8X6bhEIrDI
 
 SET default_transaction_read_only = off;
 
@@ -15,8 +14,6 @@ SET standard_conforming_strings = on;
 -- Roles
 --
 
-CREATE ROLE gisuser;
-ALTER ROLE gisuser WITH SUPERUSER INHERIT CREATEROLE CREATEDB LOGIN REPLICATION BYPASSRLS;
 
 --
 -- User Configurations
@@ -24,10 +21,6 @@ ALTER ROLE gisuser WITH SUPERUSER INHERIT CREATEROLE CREATEDB LOGIN REPLICATION 
 
 
 
-
-
-
-\unrestrict V5UNmGKElfBYUBARuW4Z3zv8666XvYdQxwcbbkLH3CeYXAhspg4wg8X6bhEIrDI
 
 --
 -- Databases
@@ -37,13 +30,11 @@ ALTER ROLE gisuser WITH SUPERUSER INHERIT CREATEROLE CREATEDB LOGIN REPLICATION 
 -- Database "template1" dump
 --
 
-\connect template1
+
 
 --
 -- PostgreSQL database dump
 --
-
-\restrict LDSGgW4x03iPRG90aEWZ9bNLzfUpvTcQNtYu7VWdjjN97Y6c2mcj9uM4Vx5tWGH
 
 -- Dumped from database version 16.4 (Debian 16.4-1.pgdg110+2)
 -- Dumped by pg_dump version 18.3
@@ -53,7 +44,6 @@ ALTER ROLE gisuser WITH SUPERUSER INHERIT CREATEROLE CREATEDB LOGIN REPLICATION 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
 SET idle_in_transaction_session_timeout = 0;
-SET transaction_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
@@ -68,7 +58,6 @@ SET row_security = off;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict LDSGgW4x03iPRG90aEWZ9bNLzfUpvTcQNtYu7VWdjjN97Y6c2mcj9uM4Vx5tWGH
 
 --
 -- Database "gis" dump
@@ -78,7 +67,6 @@ SET row_security = off;
 -- PostgreSQL database dump
 --
 
-\restrict tON10uyOBNUhhlOEkOgqxPI3tiBW8PbF4kuL4Wxak6OcQy2bJjERNOhzG9dVOfb
 
 -- Dumped from database version 16.4 (Debian 16.4-1.pgdg110+2)
 -- Dumped by pg_dump version 18.3
@@ -88,7 +76,6 @@ SET row_security = off;
 SET statement_timeout = 0;
 SET lock_timeout = 0;
 SET idle_in_transaction_session_timeout = 0;
-SET transaction_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
@@ -102,17 +89,12 @@ SET row_security = off;
 -- Name: gis; Type: DATABASE; Schema: -; Owner: -
 --
 
-CREATE DATABASE gis WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE_PROVIDER = libc LOCALE = 'en_US.utf8';
 
-
-\unrestrict tON10uyOBNUhhlOEkOgqxPI3tiBW8PbF4kuL4Wxak6OcQy2bJjERNOhzG9dVOfb
 \connect gis
-\restrict tON10uyOBNUhhlOEkOgqxPI3tiBW8PbF4kuL4Wxak6OcQy2bJjERNOhzG9dVOfb
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
 SET idle_in_transaction_session_timeout = 0;
-SET transaction_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
@@ -443,19 +425,16 @@ CREATE EVENT TRIGGER ogr_system_tables_event_trigger_for_metadata ON sql_drop
 -- PostgreSQL database dump complete
 --
 
-\unrestrict tON10uyOBNUhhlOEkOgqxPI3tiBW8PbF4kuL4Wxak6OcQy2bJjERNOhzG9dVOfb
 
 --
 -- Database "postgres" dump
 --
 
-\connect postgres
 
 --
 -- PostgreSQL database dump
 --
 
-\restrict fCA0x1YB0CqfL6co7MXNmpAkoewilJ44xy60ARCQY00Ecrgvh75EOrSJ8mxFb8d
 
 -- Dumped from database version 16.4 (Debian 16.4-1.pgdg110+2)
 -- Dumped by pg_dump version 18.3
@@ -465,7 +444,6 @@ CREATE EVENT TRIGGER ogr_system_tables_event_trigger_for_metadata ON sql_drop
 SET statement_timeout = 0;
 SET lock_timeout = 0;
 SET idle_in_transaction_session_timeout = 0;
-SET transaction_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
@@ -480,7 +458,6 @@ SET row_security = off;
 -- PostgreSQL database dump complete
 --
 
-\unrestrict fCA0x1YB0CqfL6co7MXNmpAkoewilJ44xy60ARCQY00Ecrgvh75EOrSJ8mxFb8d
 
 -- Completed on 2026-04-11 13:46:02
 
